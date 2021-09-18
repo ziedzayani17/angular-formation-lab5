@@ -12,7 +12,7 @@
 <br/>
 <br/>
 
-### 1. Créer une nouveau component *RegisterMovieComponent
+### 1. Créer une nouveau component *RegisterMovieComponent*
 
 ```sh
 ng generate component register-movie
@@ -73,7 +73,7 @@ export class RegisterMovieComponent implements OnInit {
 
 ### 3. Intégration du formulaire dans le template
 
-*** 3.1 Associer le *formGroup* avec la balise *form* et déclarer la méthode *submit* ***
+### 3.1 Associer le *formGroup* avec la balise *form* et déclarer la méthode *submit* 
 
 <br>
 
@@ -81,7 +81,7 @@ export class RegisterMovieComponent implements OnInit {
 <form class="ui form" [formGroup]="movieForm" (ngSubmit)="registerMovie()">
 ```
 
-*** 3.2 Associer les *formControl* de *formGroup* aux champs dans le template**
+### 3.2 Associer les *formControl* de *formGroup* aux champs dans le template
 
 <br>
 
@@ -90,7 +90,7 @@ export class RegisterMovieComponent implements OnInit {
   <input type="text"  placeholder="Nom de film" formControlName="name" >
 ```
 
-*** 3.2 Ajouter la méthode *registerMovie()* ***
+### 3.3 Ajouter la méthode *registerMovie()* 
 
 ```js
  registerMovie():void{
@@ -125,15 +125,15 @@ Voici le code html complet
 ```
 
 
-### 3. Validation
+### 4. Validation
 
-*** 3.2 Ajouter la validation de *formControl* à la déclaration***
+### 4.2 Ajouter la validation de *formControl* à la déclaration
 
 ```js
 name: fb.control('',[Validators.required, Validators.minLength(4)]),
 ```
 
-*** 3.2 Ajouter la validation de *formControl* à la déclaration***
+### 4.3 Ajouter la validation de *formControl* à la déclaration
 ```html
 <div class="field">
       <label>Nom</label>
